@@ -1,1 +1,0 @@
-Need recipe for gitea that keeps my own builds from their dockerfiles

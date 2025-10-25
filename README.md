@@ -1,2 +1,1 @@
-# Recipes for localy ran services ran as containers
-
+Need recipe for gitea that keeps my own builds from their dockerfiles
