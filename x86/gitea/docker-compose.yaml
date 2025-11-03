@@ -1,6 +1,6 @@
 services:
   server:
-    image: docker.gitea.com/gitea:1.24.6-rootless
+    image: docker.gitea.com/gitea:1.25-rootless
     environment:
       - GITEA__database__DB_TYPE=mysql
       - GITEA__database__HOST=db:3306
@@ -19,7 +19,7 @@ services:
     depends_on:
       - db
   db:
-    image: mysql:8
+    image: mysql:latest
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=gitea
