@@ -9,8 +9,8 @@ services:
       - GITEA__database__PASSWD=gitea
     restart: always
     volumes:
-      - gitea_gitea-data-vol:/var/lib/gitea
-      - gitea_gitea-config-vol:/etc/gitea
+      - gitea-data-vol:/var/lib/gitea
+      - gitea-config-vol:/etc/gitea
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     ports:
@@ -27,22 +27,22 @@ services:
       - MYSQL_PASSWORD=gitea
       - MYSQL_DATABASE=gitea
     volumes:
-      - gitea_mysql-data-vol:/var/lib/mysql
+      - mysql-data-vol:/var/lib/mysql
 
 volumes:
-  gitea_gitea-data-vol:
+  gitea-data-vol:
     driver: local
     driver_opts:
       type: none
       device: /home/mrodozov/Downloads/gitea/data
       o: bind
-  gitea_gitea-config-vol:
+  gitea-config-vol:
     driver: local
     driver_opts:
       type: none
       device: /home/mrodozov/Downloads/gitea/config
       o: bind
-  gitea_mysql-data-vol:
+  mysql-data-vol:
     driver: local
     driver_opts:
       type: none
