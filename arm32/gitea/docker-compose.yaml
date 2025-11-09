@@ -1,6 +1,6 @@
 services:
   server:
-    image: 
+    image: gogitea/gitea/armv7:latest
     environment:
       - GITEA__database__DB_TYPE=mysql
       - GITEA__database__HOST=db:3306
